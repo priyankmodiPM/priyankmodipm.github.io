@@ -1,4 +1,4 @@
-# Erol Bicer's Responsive Portfolio Website
+# Priyank Modi's Responsive Portfolio Website
 ## Website URL: priyankmodipm.github.io
 
 - The design is based on [Bedimcode](https://github.com/bedimcode)
@@ -13,11 +13,11 @@
 - Added Google Tag script for [Google Analytics](https://analytics.google.com)
 - Online meeting integration by [Calendly](https://calendly.com/)
 
-### Landing Page Light
+<!-- ### Landing Page Light
 
 ![preview img](./assets/snaps/light.png)
 
 ### Landing Page Dark
 
-![preview img](./assets/snaps/dark.png)
+![preview img](./assets/snaps/dark.png) -->
 
