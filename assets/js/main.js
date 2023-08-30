@@ -132,17 +132,21 @@ const sections = document.querySelectorAll('section[data-id]')
 function scrollActive(){
     const scrollY = window.pageYOffset
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('data-id')
-
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
+    try{
+        sections.forEach(current =>{
+            const sectionHeight = current.offsetHeight
+            const sectionTop = current.offsetTop - 50;
+            let sectionId = current.getAttribute('data-id')
+    
+            if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+            }else{
+                document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            }
+        })
+    }catch{
+        
+    }
 }
 window.addEventListener('scroll', scrollActive)
 
@@ -180,11 +184,6 @@ if (selectedTheme) {
   // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-document.onreadystatechange = () => {
-    document.body.classList['add'](darkTheme)
-    themeButton.classList['add'](iconTheme)
 }
 
 // Activate / deactivate the theme manually with the button
@@ -262,5 +261,7 @@ function SendMail(){
         // alert("Success! " + res.status);
         // alert("Your message has been sent successfully!");
         swal("Success!", "Your message has been sent!", "success");
+    }).catch(function (err){
+        swal("Seems like email service is down. Kindly send an email to priyankmodi99@gmail.com manually");
     })
 }
