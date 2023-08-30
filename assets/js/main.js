@@ -209,10 +209,7 @@ function validateName(){
         nameError.innerHTML = 'Full name is required!';
         return false;
     }
-    if( !name.match(/[a-zA-Z]{2,}\s[a-zA-Z]{1,}'?-?[a-zA-Z]{2,}\s?([a-zA-Z]{1,})?/) ){
-        nameError.innerHTML = 'Enter full name!';
-        return false;
-    }
+    
     nameError.innerHTML = '<i class="uil uil-check-circle projects__modal-icon"></i>';
     return true;
 }
@@ -261,7 +258,7 @@ function SendMail(){
         subject : document.getElementById("subject").value,
         message : document.getElementById("message").value
     }
-    emailjs.send("service_4ajtfo5", "template_ryff15a", params).then(function (res){
+    emailjs.send("service_rd21624","template_96lj9yp", params).then(function (res){
         // alert("Success! " + res.status);
         // alert("Your message has been sent successfully!");
         swal("Success!", "Your message has been sent!", "success");
