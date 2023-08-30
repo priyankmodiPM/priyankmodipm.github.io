@@ -172,7 +172,7 @@ const selectedTheme = localStorage.getItem('selected-theme')
 const selectedIcon = localStorage.getItem('selected-icon')
 
 // We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'light' : 'dark'
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
 
 // We validate if the user previously chose a topic
@@ -184,7 +184,7 @@ if (selectedTheme) {
 
 document.onreadystatechange = () => {
     document.body.classList['add'](darkTheme)
-    themeButton.classList['remove'](iconTheme)
+    themeButton.classList['add'](iconTheme)
 }
 
 // Activate / deactivate the theme manually with the button
