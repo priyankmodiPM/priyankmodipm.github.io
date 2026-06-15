@@ -129,48 +129,5 @@
     document.getElementById('js-slot').textContent = 'ZQ7-JSXX-8008';
   </script>
 
-  <!-- ══════════════════════════════════════════════════════════════════════
-       EXPERIMENT REFERENCE TABLE (SSR — visible to all crawlers)
-  ══════════════════════════════════════════════════════════════════════ -->
-  <h2>Channel Reference</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>Channel</th>
-        <th>Token</th>
-        <th>Location</th>
-        <th>What a hit proves</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td>Body text (control)</td>  <td class="token ctrl">ZQ7-CTRL-1001</td><td>Visible &lt;p&gt; above</td>                           <td>Engine reads HTML body text</td></tr>
-      <tr><td>2</td><td>alt attribute</td>         <td class="token alt">ZQ7-ALTX-2002</td> <td>&lt;img alt="…"&gt;</td>                                <td>Engine reads alt attribute</td></tr>
-      <tr><td>3</td><td>Filename / URL slug</td>   <td class="token file">ZQ7-FILE-3003</td><td>Image src filename</td>                                  <td>Engine uses filename as a signal</td></tr>
-      <tr><td>4</td><td>Image pixels (OCR) ★</td>  <td class="token pixel">ZQ7-PXEL-4004</td><td>Rendered into bottom strip of the PNG</td>             <td>Engine OCRs / vision-processes pixels</td></tr>
-      <tr><td>5</td><td>EXIF / IPTC / XMP</td>    <td class="token meta">ZQ7-META-5005</td> <td>Embedded in PNG binary (Caption-Abstract, XMP Description, EXIF ImageDescription)</td><td>Engine reads embedded file metadata</td></tr>
-      <tr><td>6</td><td>figcaption</td>            <td class="token cap">ZQ7-CAPT-6006</td> <td>&lt;figcaption&gt; below image</td>                      <td>Engine uses proximity / caption text</td></tr>
-      <tr><td>7</td><td>JSON-LD ImageObject</td>   <td class="token json">ZQ7-JSON-7007</td><td>&lt;script type=application/ld+json&gt; in &lt;head&gt;</td><td>Engine parses schema.org structured data</td></tr>
-      <tr><td>8</td><td>JavaScript-injected</td>   <td class="token js">ZQ7-JSXX-8008</td>  <td>Client-side &lt;script&gt; → #js-slot</td>              <td>Engine executes JavaScript (most don't)</td></tr>
-    </tbody>
-  </table>
-
-  <!-- ══════════════════════════════════════════════════════════════════════
-       PROBE PROMPT (for humans running the test)
-  ══════════════════════════════════════════════════════════════════════ -->
-  <h2>Probe Prompt</h2>
-  <p style="font-size:0.85rem;">Paste this into each AI engine (with browsing enabled, pointing at the live URL of this page):</p>
-  <blockquote style="background:#0f2035;border-left:4px solid #1f8eff;padding:0.75rem 1rem;margin:0;font-size:0.88rem;">
-    Visit [URL of this page]. List every unusual code-like token you can find on the page that matches the pattern
-    <code>ZQ7-XXXX-####</code>. For each token, say exactly where on the page you found it
-    (body text, image alt text, image filename, image content, figcaption, structured data, etc.).
-    Do not guess — only report tokens you can directly observe.
-  </blockquote>
-
-  <p style="font-size:0.8rem;color:#4a5e75;margin-top:2rem;">
-    Compiled June 2026 · LLM Optimization Using Graphical Content experiment kit ·
-    Re-run quarterly — AI crawler capabilities change fast.
-  </p>
-
 </body>
 </html>
