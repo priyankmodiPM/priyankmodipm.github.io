@@ -8,11 +8,11 @@
   <title>Frescopa Milano — AI Channel Ingestion Test</title>
   <meta name="description" content="This page is part of a controlled experiment to determine which channels AI/LLM crawlers read from a web page. It is not intended for human SEO.">
 
-  <!-- ═══════════════════════════════════════════════════════════════[...]
+  <!-- ═══════════════════════════════════════════════════════════════
        CHANNEL 7 — JSON-LD ImageObject
        Token: ZQ7-JSON-7007
        What a hit proves: engine parses structured data (schema.org)
-  ══════════════════════════════════════════════════════════════════[...]
+  ═══════════════════════════════════════════════════════════════ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -89,11 +89,11 @@
     This page is <code>noindex</code> for human search but accessible to AI crawlers.
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════[...]
+  <!-- ═══════════════════════════════════════════════════════════════
        CHANNEL 1 — Body text (control)
        Token: ZQ7-CTRL-1001
        What a hit proves: engine reads visible HTML body text
-  ══════════════════════════════════════════════════════════════════[...]
+  ═══════════════════════════════════════════════════════════════ -->
   <h2>Product</h2>
   <p>
     Frescopa Milano Whole Bean Espresso — alpine-roasted for a smooth, rich crema.
@@ -112,17 +112,17 @@
     <figcaption>ZQ7-CAPT-6006 · Frescopa Milano Espresso, whole bean, 12 oz / 340 g. Alpine ski resort setting, gondola cables visible at dusk.</figcaption>
   </figure>
 
-  <!-- ════════════════════════════════════════════════════════════════[...]
+  <!-- ═══════════════════════════════════════════════════════════════
        CHANNEL 9 — External image tag
        What a hit proves: engine loads external images
-  ══════════════════════════════════════════════════════════════════[...]
-  <img src="https://s7d6.scene7.com//is/image/varun1/cinnamon-hazelnut" alt="Cinnamon Hazelnut" width="auto" height="auto">
+  ═══════════════════════════════════════════════════════════════ -->
+  <img src="https://s7d6.scene7.com//is/image/varun1/cinnamon-hazelnut" alt="Cinnamon Hazelnut">
 
-  <!-- ════════════════════════════════════════════════════════════════[...]
+  <!-- ═══════════════════════════════════════════════════════════════
        CHANNEL 8 — JavaScript-injected (client-side only)
        Token: ZQ7-JSXX-8008
        What a hit proves: engine executes JavaScript (most AI crawlers do NOT)
-  ══════════════════════════════════════════════════════════════════[...]
+  ═══════════════════════════════════════════════════════════════ -->
   <p id="js-slot"><!-- JS inserts ZQ7-JSXX-8008 here; SSR crawlers never see it --></p>
   <script>
     document.getElementById('js-slot').textContent = 'ZQ7-JSXX-8008';
