@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <!-- Allow AI crawlers even though we block human search index -->
+  <title>Frescopa Milano — AI Channel Ingestion Test</title>
+  <meta name="description" content="This page is part of a controlled experiment to determine which channels AI/LLM crawlers read from a web page. It is not intended for human SEO.">
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       CHANNEL 7 — JSON-LD ImageObject
+       Token: ZQ7-JSON-7007
+       What a hit proves: engine parses structured data (schema.org)
+  ══════════════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageObject",
+    "name": "Frescopa Milano Espresso — AI Channel Test Image",
+    "contentUrl": "ZQ7-FILE-3003.png",
+    "description": "ZQ7-JSON-7007",
+    "encodingFormat": "image/png",
+    "creator": {
+      "@type": "Organization",
+      "name": "Frescopa Milano",
+      "sameAs": "https://example.com/frescopa"
+    },
+    "copyrightNotice": "© Frescopa Milano",
+    "license": "https://example.com/license",
+    "creditText": "Frescopa Milano Espresso channel test"
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0d1b2a;
+      color: #b0bece;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      line-height: 1.6;
+    }
+    h1 { color: #fff; font-size: 1.6rem; margin-bottom: 0.25rem; }
+    h2 { color: #1f8eff; font-size: 1.1rem; margin: 2rem 0 0.5rem; }
+    .experiment-note {
+      background: #112740;
+      border-left: 4px solid #ffb300;
+      padding: 0.8rem 1rem;
+      font-size: 0.85rem;
+      color: #d0c090;
+      margin: 1rem 0 1.5rem;
+    }
+    figure { margin: 0; }
+    img { max-width: 100%; display: block; }
+    figcaption {
+      font-size: 0.82rem;
+      color: #8a9bac;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+    table { border-collapse: collapse; width: 100%; margin-top: 0.75rem; font-size: 0.82rem; }
+    th { background: #1a3a5c; color: #fff; padding: 0.5rem 0.75rem; text-align: left; }
+    td { padding: 0.45rem 0.75rem; border-bottom: 1px solid #1e3048; }
+    tr:nth-child(even) td { background: #0f2035; }
+    code { background: #1e3048; padding: 0.15em 0.4em; border-radius: 3px; font-family: monospace; color: #7ecfff; font-size: 0.88em; }
+    .token { font-family: monospace; font-weight: bold; letter-spacing: 0.05em; }
+    .ctrl   { color: #aaa; }
+    .alt    { color: #00c2b2; }
+    .file   { color: #00c2b2; }
+    .pixel  { color: #1f8eff; }
+    .meta   { color: #1f8eff; }
+    .cap    { color: #00c2b2; }
+    .json   { color: #ffb300; }
+    .js     { color: #ff4c4c; }
+    #js-slot { min-height: 1.2em; }
+  </style>
+</head>
+<body>
+
+  <h1>Frescopa Milano — AI Channel Ingestion Test</h1>
+  <p style="color:#8a9bac;font-size:0.85rem;margin-top:0.1rem;">Experiment 1 · LLM Optimization Using Graphical Content</p>
+
+  <div class="experiment-note">
+    <strong>What this page is:</strong> A controlled experiment to determine, for each AI engine, which channels it reads from a page and its images.
+    Each channel carries a unique token. Whichever tokens an engine reports = the channels it actually ingests.
+    This page is <code>noindex</code> for human search but accessible to AI crawlers.
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       CHANNEL 1 — Body text (control)
+       Token: ZQ7-CTRL-1001
+       What a hit proves: engine reads visible HTML body text
+  ══════════════════════════════════════════════════════════════════════ -->
+  <h2>Product</h2>
+  <p>
+    Frescopa Milano Whole Bean Espresso — alpine-roasted for a smooth, rich crema.
+    Reference marker: <span class="token ctrl">ZQ7-CTRL-1001</span>.
+  </p>
+
+  <figure>
+    <img
+      src="ZQ7-FILE-3003.png"
+      alt="ZQ7-ALTX-2002"
+      width="2000"
+      height="1482"
+      loading="eager"
+    >
+    <!-- Channel 6: figcaption -->
+    <figcaption>ZQ7-CAPT-6006 · Frescopa Milano Espresso, whole bean, 12 oz / 340 g. Alpine ski resort setting, gondola cables visible at dusk.</figcaption>
+  </figure>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       CHANNEL 8 — JavaScript-injected (client-side only)
+       Token: ZQ7-JSXX-8008
+       What a hit proves: engine executes JavaScript (most AI crawlers do NOT)
+  ══════════════════════════════════════════════════════════════════════ -->
+  <p id="js-slot"><!-- JS inserts ZQ7-JSXX-8008 here; SSR crawlers never see it --></p>
+  <script>
+    document.getElementById('js-slot').textContent = 'ZQ7-JSXX-8008';
+  </script>
+
+</body>
+</html>
