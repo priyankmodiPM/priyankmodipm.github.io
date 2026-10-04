@@ -16,7 +16,10 @@
 
 The experiment is isolated under `/image-reading/`, with nine independent
 catalogue pages at `/image-reading/x/<instance-token>/`. Images and PDFs use
-absolute AEM Dynamic Media delivery URLs; no local asset copies are required.
+absolute AEM Dynamic Media original delivery URLs (`/original/as/`); no local
+asset copies are required. Original renditions preserve the uploaded image
+bytes and embedded XMP/IPTC/EXIF metadata. Do not replace them with resized
+`/as/` renditions, which strip the metadata canaries used by the experiment.
 The existing homepage, `assets-brand-visibility`, `channel-test`, and
 `channel-test2` routes are unchanged.
 
