@@ -12,6 +12,20 @@
 - Presentations are  embedded from [Beautiful.ai](https://www.beautiful.ai)
 - Added Google Tag script for [Google Analytics](https://analytics.google.com)
 
+## Image-reading experiment
+
+The experiment is isolated under `/image-reading/`, with nine independent
+catalogue pages at `/image-reading/x/<instance-token>/`. Images and PDFs use
+absolute AEM Dynamic Media delivery URLs; no local asset copies are required.
+The existing homepage, `assets-brand-visibility`, `channel-test`, and
+`channel-test2` routes are unchanged.
+
+Pages are generated from `experiments/image-reading/site/` in the AEM-LLMO
+experiment worktree. When refreshing this route, copy only the generated
+`index.html` and `x/` into `image-reading/`; do not replace the portfolio root,
+its sitemap, or its robots policy. Prompt sheets must use
+`https://priyankmodipm.github.io/image-reading` as their base URL.
+
 <!-- ### Landing Page Light
 
 ![preview img](./assets/snaps/light.png)
@@ -19,4 +33,3 @@
 ### Landing Page Dark
 
 ![preview img](./assets/snaps/dark.png) -->
-
