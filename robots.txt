@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://priyankmodipm.github.io/sitemap.xml
