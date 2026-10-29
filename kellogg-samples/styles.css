@@ -1,0 +1,226 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #242a33;
+  background: #f7f5f0;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.page-header {
+  padding: 48px 0;
+  background: #fff;
+  border-top: 8px solid #bf1936;
+  border-bottom: 1px solid #e6e1d8;
+}
+
+.eyebrow,
+.number {
+  color: #a6162f;
+  font-weight: 700;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.intro {
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: #505763;
+  font-size: 1.1rem;
+}
+
+main {
+  padding-block: 36px;
+}
+
+h2 {
+  margin: 0 0 24px;
+  font-size: 1.5rem;
+}
+
+.activities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.nutrition {
+  margin-top: 48px;
+}
+
+.section-intro {
+  max-width: 800px;
+  margin: -8px 0 24px;
+  color: #505763;
+}
+
+.nutrition-data {
+  padding: 0 16px 16px;
+  font-size: 0.85rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption {
+  margin-bottom: 16px;
+  font-weight: 700;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 8px 6px;
+  border-bottom: 1px solid #ded9cf;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  background: #f7f5f0;
+}
+
+.activity {
+  overflow: hidden;
+  border: 1px solid #ded9cf;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.activity-heading {
+  padding: 24px;
+  min-height: 170px;
+}
+
+.number {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.activity-heading p:last-child {
+  margin: 8px 0 0;
+  color: #505763;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 20px 24px;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #9c1730;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid #242a33;
+  outline-offset: 4px;
+}
+
+footer {
+  padding-block: 12px 32px;
+  border-top: 1px solid #ded9cf;
+  color: #505763;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .activities {
+    grid-template-columns: 1fr;
+    max-width: 650px;
+    margin-inline: auto;
+  }
+
+  .activity-heading {
+    min-height: 0;
+  }
+}
+
+@media print {
+  .page-header,
+  main > h2,
+  .nutrition > h2,
+  .section-intro,
+  .nutrition-data,
+  .activity-heading,
+  figcaption,
+  footer {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .activities {
+    display: block;
+    max-width: none;
+  }
+
+  .nutrition {
+    margin-top: 0;
+  }
+
+  .activity {
+    border: 0;
+    border-radius: 0;
+    break-after: page;
+  }
+
+  .activity:last-child {
+    break-after: auto;
+  }
+
+  img {
+    max-height: 250mm;
+    width: auto;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+}
